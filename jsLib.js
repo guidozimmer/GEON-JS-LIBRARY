@@ -3,7 +3,7 @@ let chartCounter = 1;
 let afterDrawExecuted = false; // Add a flag
 
 // Function to create and return the chart for 18 months
-export function createChart18Monate(canvasId, containerClass, firstdata18Monate, secondData18Monate) {
+function createChart18Monate(canvasId, containerClass, firstdata18Monate, secondData18Monate) {
     var labels = ["18 Monate"];
     var barColors1 = ["#348200"]; // Fill color for the first bar
     var barColors2 = ["#98CB35"]; // Fill color for the second bar
@@ -141,7 +141,7 @@ export function createChart18Monate(canvasId, containerClass, firstdata18Monate,
 }
 
 // Function to create and return the chart for 36 months
-export function createChart36Monate(canvasId, containerClass, firstdata36Monate, secondData36Monate) {
+function createChart36Monate(canvasId, containerClass, firstdata36Monate, secondData36Monate) {
     var labels = ["36 Monate"];
     var barColors1 = ["#348200"]; // Fill color for the first bar
     var barColors2 = ["#98CB35"]; // Fill color for the second bar
@@ -367,3 +367,9 @@ document.addEventListener('DOMContentLoaded', (event) => {
         console.log('Line drawn from chart', i + 1, 'to chart', i + 2);
     }
 });
+
+
+module.exports = {
+	createChart18Monate,
+	createChart36Monate
+};
