@@ -279,6 +279,98 @@ export function createChart36Monate(canvasId, containerClass, firstdata36Monate,
 }
 
 
+document.addEventListener('DOMContentLoaded', (event) => {
+    console.log('DOM fully loaded and parsed');
+
+    function getElementCoordinates(element) {
+        const rect = element.getBoundingClientRect();
+        return {
+            top: rect.top + window.scrollY,
+            bottom: rect.bottom + window.scrollY,
+            left: rect.left + window.scrollX,
+            right: rect.right + window.scrollX
+        };
+    }
+
+    // Get the canvas for drawing the lines
+    const lineCanvas = document.getElementById('lineCanvas');
+
+    // Check if canvas is obtained
+    if (!lineCanvas) {
+        console.error('Canvas not found');
+        return;
+    } else {
+        console.log('Canvas found');
+    }
+
+    // Set the size of the lineCanvas to cover the entire viewport
+    lineCanvas.width = window.innerWidth;
+    lineCanvas.height = window.innerHeight;
+
+    // Get the 2D drawing context
+    const ctx = lineCanvas.getContext('2d');
+
+    // Check if context is obtained
+    if (!ctx) {
+        console.error('Failed to get 2D context');
+        return;
+    } else {
+        console.log('2D context obtained');
+    }
+
+    // Get all the canvas elements
+    const charts = document.querySelectorAll('canvas[id^="Chart"]');
+
+    // Draw lines between each pair of charts
+    for (let i = 0; i < charts.length; i += 2) {
+        const canvas1 = charts[i];
+        const canvas2 = charts[i + 1];
+
+        // Check if elements are obtained
+        if (!canvas1 || !canvas2) {
+            console.error('Failed to get canvas elements for pair', i, i + 1);
+            continue;
+        } else {
+            console.log('Canvas elements obtained for pair', i, i + 1);
+        }
+
+        // Calculate their coordinates
+        const coords1 = getElementCoordinates(canvas1);
+        const coords2 = getElementCoordinates(canvas2);
+
+        // Check coordinates
+        console.log('Coordinates of chart', i + 1, ':', coords1);
+        console.log('Coordinates of chart', i + 2, ':', coords2);
+
+        // Extract the required coordinates and move them 50px to the right
+        const topCoords = {
+            x: coords1.left + 78,
+            y: coords1.top + 4
+        };
+        const bottomCoords = {
+            x: coords2.left + 78,
+            y: coords2.bottom - 4
+        };
+
+        // Check extracted coordinates
+        console.log('Top coordinates of chart', i + 1, '(moved 50px right):', topCoords);
+        console.log('Bottom coordinates of chart', i + 2, '(moved 50px right):', bottomCoords);
+
+        // Draw the line from topCoords to bottomCoords
+        ctx.beginPath();
+        ctx.moveTo(topCoords.x, topCoords.y);
+        ctx.lineTo(bottomCoords.x, bottomCoords.y);
+        ctx.strokeStyle = '#348200'; // Line color
+        ctx.lineWidth = 0.5;
+        ctx.stroke();
+
+        console.log('Line drawn from chart', i + 1, 'to chart', i + 2);
+    }
+});
+
+
+
+
 module.exports = {
     createChart18Monate,
     createChart36Monate
