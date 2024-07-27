@@ -368,18 +368,24 @@ document.addEventListener('DOMContentLoaded', (event) => {
     }
 });
 
+function delayedExecution() {
+	setTimeout(() => createChart18Monate('Chart1', '.autobahn', [2000], [150]), 5000);
+	setTimeout(() => createChart36Monate('Chart2', '.autobahn', [130], [600])5000);
+	
+	setTimeout(() => createChart18Monate('Chart3', '.bahnstrecke', [200], [80]), 5000);
+	setTimeout(() => createChart36Monate('Chart4', '.bahnstrecke', [100], [100]), 5000);
+	
+	setTimeout(() => createChart18Monate('Chart5', '.landwirtschaft', [150], [400]), 5000);
+	setTimeout(() => createChart36Monate('Chart6', '.landwirtschaft', [250], [120]), 5000);
+	
+	setTimeout(() => createChart18Monate('Chart7', '.batteriespeicher', [120], [60]);, 5000);
+	setTimeout(() => createChart36Monate('Chart8', '.batteriespeicher', [100], [150]);, 5000);
+    
+  
+}
 
-    createChart18Monate('Chart1', '.autobahn', [2000], [150]);
-    createChart36Monate('Chart2', '.autobahn', [130], [600]);
 
-    createChart18Monate('Chart3', '.bahnstrecke', [200], [80]);
-    createChart36Monate('Chart4', '.bahnstrecke', [100], [100]);
 
-    createChart18Monate('Chart5', '.landwirtschaft', [150], [400]);
-    createChart36Monate('Chart6', '.landwirtschaft', [250], [120]);
-
-    createChart18Monate('Chart7', '.batteriespeicher', [120], [60]);
-    createChart36Monate('Chart8', '.batteriespeicher', [100], [150]);
 
 // Attach functions to the global window object
 //window.createChart18Monate = createChart18Monate;
