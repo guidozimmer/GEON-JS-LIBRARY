@@ -367,11 +367,3 @@ document.addEventListener('DOMContentLoaded', (event) => {
         console.log('Line drawn from chart', i + 1, 'to chart', i + 2);
     }
 });
-
-
-
-
-module.exports = {
-    createChart18Monate,
-    createChart36Monate
-};
