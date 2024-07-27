@@ -385,7 +385,7 @@ function delayedExecution() {
 }
 
 
-
+delyedExecution()
 
 // Attach functions to the global window object
 //window.createChart18Monate = createChart18Monate;
