@@ -1,0 +1,22 @@
+{
+  "name": "geon-js-lib",
+  "version": "1.0.0",
+  "description": "create bar graphs for geon presentation",
+  "main": "jsLib.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/guidozimmer/GEON-JS-LIBRARY.git"
+  },
+  "keywords": [
+    "barGraph"
+  ],
+  "author": "raphael zimmer",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/guidozimmer/GEON-JS-LIBRARY/issues"
+  },
+  "homepage": "https://github.com/guidozimmer/GEON-JS-LIBRARY#readme"
+}
