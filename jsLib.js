@@ -21,7 +21,6 @@ function createChart18Monate(canvasId, containerClass, firstdata18Monate, second
     }
 
     // Create a new chart instance
-	// Create a new chart instance
 	var chart = new Chart(canvas, {
 	    type: "horizontalBar",
 	    data: {
@@ -47,6 +46,9 @@ function createChart18Monate(canvasId, containerClass, firstdata18Monate, second
 	        responsive: false, // Make sure the chart is not responsive to fit the fixed dimensions
 	        maintainAspectRatio: false,
 	        legend: { display: false }, // Hides the legend
+	        animation: {
+	            duration: 0 // Disable animation by setting duration to 0
+	        },
 	        scales: {
 	            xAxes: [{
 	                ticks: {
@@ -87,6 +89,7 @@ function createChart18Monate(canvasId, containerClass, firstdata18Monate, second
 	        }
 	    }
 	});
+	
     
 
     // Generate IDs for value elements based on the chartCounter
@@ -163,72 +166,76 @@ function createChart36Monate(canvasId, containerClass, firstdata36Monate, second
         console.log('No element with class "autobahn" found.');
     }
 
-    // Create a new chart instance
-    var chart = new Chart(canvas, {
-        type: "horizontalBar",
-        data: {
-            labels: labels,
-            datasets: [
-                {
-                    label: 'Graph1-36Monate',
-                    backgroundColor: barColors1,
-                    borderColor: borderColors1,
-                    borderWidth: 1,
-                    data: firstdata36Monate
-                },
-                {
-                    label: 'Graph2-36Monate',
-                    backgroundColor: barColors2,
-                    borderColor: borderColors2,
-                    borderWidth: 0.5,
-                    data: secondData36Monate
-                }
-            ]
-        },
-        options: {
-            responsive: false, // Make sure the chart is not responsive to fit the fixed dimensions
-            maintainAspectRatio: false,
-            legend: { display: false }, // Hides the legend
-            scales: {
-                xAxes: [{
-                    ticks: {
-                        display: false,
-                        min: valueRange36Monate[0], // Use the first element of valueRange as the min value
-                        max: valueRange36Monate[1]  // Use the second element of valueRange as the max value
-                    },
-                    gridLines: {
-                        display: false,
-                        drawOnChartArea: false,
-                        drawTicks: false,
-                        color: "transparent"
-                    },
-                    drawBorder: true,
-                    borderColor: "transparent"
-                }],
-                yAxes: [{
+	// Create a new chart instance
+	var chart = new Chart(canvas, {
+	    type: "horizontalBar",
+	    data: {
+	        labels: labels,
+	        datasets: [
+	            {
+	                label: 'Graph1-36Monate',
+	                backgroundColor: barColors1,
+	                borderColor: borderColors1,
+	                borderWidth: 1,
+	                data: firstdata36Monate
+	            },
+	            {
+	                label: 'Graph2-36Monate',
+	                backgroundColor: barColors2,
+	                borderColor: borderColors2,
+	                borderWidth: 0.5,
+	                data: secondData36Monate
+	            }
+	        ]
+	    },
+	    options: {
+	        responsive: false, // Make sure the chart is not responsive to fit the fixed dimensions
+	        maintainAspectRatio: false,
+	        legend: { display: false }, // Hides the legend
+	        animation: {
+	            duration: 0 // Disable animation by setting duration to 0
+	        },
+	        scales: {
+	            xAxes: [{
+	                ticks: {
+	                    display: false,
+	                    min: valueRange36Monate[0], // Use the first element of valueRange as the min value
+	                    max: valueRange36Monate[1]  // Use the second element of valueRange as the max value
+	                },
+	                gridLines: {
+	                    display: false,
+	                    drawOnChartArea: false,
+	                    drawTicks: false,
+	                    color: "transparent"
+	                },
+	                drawBorder: true,
+	                borderColor: "transparent"
+	            }],
+	            yAxes: [{
 	                ticks: {
 	                    fontColor: "#D7FC51" // Change label color to #D7FC51
 	                },
-                    gridLines: {
-                        display: false,
-                    },
-                    drawBorder: true,
-                    borderColor: "transparent"
-                }]
-            },
-            plugins: {
-                datalabels: {
-                    display: false
-                }
-            },
-            layout: {
-                padding: {
-                    right: 70, // Add padding to the right to prevent text cut off
-                    left: 10
-                }
-            }
-        }
-    });
+	                gridLines: {
+	                    display: false,
+	                },
+	                drawBorder: true,
+	                borderColor: "transparent"
+	            }]
+	        },
+	        plugins: {
+	            datalabels: {
+	                display: false
+	            }
+	        },
+	        layout: {
+	            padding: {
+	                right: 70, // Add padding to the right to prevent text cut off
+	                left: 10
+	            }
+	        }
+	    }
+	});
+    
 
     // Generate IDs for value elements based on the chartCounter
     var valueId1 = `value${chartCounter}_1`;
