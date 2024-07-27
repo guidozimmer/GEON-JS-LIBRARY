@@ -16,7 +16,7 @@ function createChart18Monate(canvasId, containerClass, firstdata18Monate, second
     // Adjust the canvas width to match the "projektcluster" div width
     if (autobahnclusterDiv) {
         canvas.width = autobahnclusterDiv.offsetWidth + 40; // Adjusting for some padding
-        canvas.heightå = canvas.height - 11;
+        canvas.height = canvas.height - 11;
     } else {
         console.log('No element with class "projektcluster" found.');
     }
@@ -369,7 +369,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
 });
 
 
-module.exports = {
-	createChart18Monate,
-	createChart36Monate
-};
+// Attach functions to the global window object
+window.createChart18Monate = createChart18Monate;
+window.createChart36Monate = createChart36Monate;
