@@ -378,8 +378,8 @@ function delayedExecution() {
 	setTimeout(() => createChart18Monate('Chart5', '.landwirtschaft', [150], [400]), 5000);
 	setTimeout(() => createChart36Monate('Chart6', '.landwirtschaft', [250], [120]), 5000);
 	
-	setTimeout(() => createChart18Monate('Chart7', '.batteriespeicher', [120], [60]);, 5000);
-	setTimeout(() => createChart36Monate('Chart8', '.batteriespeicher', [100], [150]);, 5000);
+	setTimeout(() => createChart18Monate('Chart7', '.batteriespeicher', [120], [60]), 5000);
+	setTimeout(() => createChart36Monate('Chart8', '.batteriespeicher', [100], [150]), 5000);
     
   
 }
