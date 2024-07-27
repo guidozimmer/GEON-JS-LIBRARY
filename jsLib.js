@@ -3,7 +3,6 @@ let chartCounter = 1;
 
 // Function to create and return the chart for 18 months
 function createChart18Monate(canvasId, containerClass, firstdata18Monate, secondData18Monate) {
-    var labels = ["18 Monate"];
     var barColors1 = ["#348200"];
     var barColors2 = ["#98CB35"];
     var borderColors1 = ["#348200"];
@@ -22,7 +21,7 @@ function createChart18Monate(canvasId, containerClass, firstdata18Monate, second
     var chart = new Chart(canvas, {
         type: "horizontalBar",
         data: {
-            labels: labels,
+            labels: "",
             datasets: [
                 {
                     label: 'Graph1-18Monate',
@@ -124,7 +123,6 @@ function createChart18Monate(canvasId, containerClass, firstdata18Monate, second
 
 // Function to create and return the chart for 36 months
 function createChart36Monate(canvasId, containerClass, firstdata36Monate, secondData36Monate) {
-    var labels = ["36 Monate"];
     var barColors1 = ["#348200"];
     var barColors2 = ["#98CB35"];
     var borderColors1 = ["#A3D33A"];
@@ -143,7 +141,7 @@ function createChart36Monate(canvasId, containerClass, firstdata36Monate, second
     var chart = new Chart(canvas, {
         type: "horizontalBar",
         data: {
-            labels: labels,
+            labels: "",
             datasets: [
                 {
                     label: 'Graph1-36Monate',
