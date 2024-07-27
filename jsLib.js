@@ -50,9 +50,10 @@ function createChart18Monate(canvasId, containerClass, firstdata18Monate, second
             scales: {
                 xAxes: [{
                     ticks: {
-                        display: false, // Hide x-axis labels
+                        display: true, // Ensure labels are displayed
                         min: valueRange18Monate[0],
-                        max: valueRange18Monate[1]
+                        max: valueRange18Monate[1],
+                        fontColor: "rgba(0, 0, 0, 0)" // Make x-axis labels fully transparent
                     },
                     gridLines: {
                         display: false,
@@ -65,7 +66,8 @@ function createChart18Monate(canvasId, containerClass, firstdata18Monate, second
                 }],
                 yAxes: [{
                     ticks: {
-                        display: false, // Hide y-axis labels
+                        display: true, // Ensure labels are displayed
+                        fontColor: "rgba(0, 0, 0, 0)" // Make y-axis labels fully transparent
                     },
                     gridLines: {
                         display: false,
@@ -126,6 +128,7 @@ function createChart18Monate(canvasId, containerClass, firstdata18Monate, second
 }
 
 
+
 // Function to create and return the chart for 36 months
 function createChart36Monate(canvasId, containerClass, firstdata36Monate, secondData36Monate) {
     var labels = ["36 Monate"];
@@ -175,9 +178,10 @@ function createChart36Monate(canvasId, containerClass, firstdata36Monate, second
             scales: {
                 xAxes: [{
                     ticks: {
-                        display: false, // Hide x-axis labels
+                        display: true, // Ensure labels are displayed
                         min: valueRange36Monate[0],
-                        max: valueRange36Monate[1]
+                        max: valueRange36Monate[1],
+                        fontColor: "rgba(0, 0, 0, 0)" // Make x-axis labels fully transparent
                     },
                     gridLines: {
                         display: false,
@@ -190,7 +194,8 @@ function createChart36Monate(canvasId, containerClass, firstdata36Monate, second
                 }],
                 yAxes: [{
                     ticks: {
-                        display: false, // Hide y-axis labels
+                        display: true, // Ensure labels are displayed
+                        fontColor: "rgba(0, 0, 0, 0)" // Make y-axis labels fully transparent
                     },
                     gridLines: {
                         display: false,
