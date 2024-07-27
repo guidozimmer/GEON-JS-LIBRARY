@@ -370,7 +370,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
 function delayedExecution() {
 	setTimeout(() => createChart18Monate('Chart1', '.autobahn', [2000], [150]), 5000);
-	setTimeout(() => createChart36Monate('Chart2', '.autobahn', [130], [600])5000);
+	setTimeout(() => createChart36Monate('Chart2', '.autobahn', [130], [600]), 5000);
 	
 	setTimeout(() => createChart18Monate('Chart3', '.bahnstrecke', [200], [80]), 5000);
 	setTimeout(() => createChart36Monate('Chart4', '.bahnstrecke', [100], [100]), 5000);
