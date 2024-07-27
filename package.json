@@ -1,6 +1,6 @@
 {
   "name": "geon-js-lib",
-  "version": "1.1.9",
+  "version": "1.2.0",
   "description": "create bar graphs for geon presentation",
   "type": "module",
   "main": "jsLib.js",
