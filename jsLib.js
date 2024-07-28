@@ -3,7 +3,7 @@ const maxWidth = 300; // Example max width
 const maxHeight = 40; // Example max height
 
 // Function to create and return the chart for 18 months
-export function createChart18Monate(canvasId, containerClass, firstdata18Monate, secondData18Monate, globalMaxValue) {
+function createChart18Monate(canvasId, containerClass, firstdata18Monate, secondData18Monate, globalMaxValue) {
     var labels = ["18 Monate"];
     var barColors1 = ["#348200"]; // Fill color for the first bar
     var barColors2 = ["#98CB35"]; // Fill color for the second bar
@@ -143,7 +143,7 @@ export function createChart18Monate(canvasId, containerClass, firstdata18Monate,
 }
 
 // Function to create and return the chart for 36 months
-export function createChart36Monate(canvasId, containerClass, firstdata36Monate, secondData36Monate, globalMaxValue) {
+function createChart36Monate(canvasId, containerClass, firstdata36Monate, secondData36Monate, globalMaxValue) {
     var labels = ["36 Monate"];
     var barColors1 = ["#348200"]; // Fill color for the first bar
     var barColors2 = ["#98CB35"]; // Fill color for the second bar
